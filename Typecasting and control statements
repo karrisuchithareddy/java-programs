@@ -1,3 +1,27 @@
+//TYPECASTING AND ITS TYPES
+//WIDENING (implicit) lower-->higher
+class Typecasting
+{
+public static void main(String args[])
+{
+int myint=9;
+double mydouble=myint;
+System.out.println(myint);
+System.out.println(mydouble);
+}
+}  //output:9,9.0
+
+//NARROWING (explicit) higher-->lower
+class Typecasting
+{
+public static void main(String args[])
+{
+double mydouble=9.78d;
+int myint=(int)mydouble;
+System.out.println(mydouble);
+System.out.println(myint);
+}
+}   //output:9.78,9
 //program to check given letter is vowel or not
 /*import java.io.*;
 class Typecasting
