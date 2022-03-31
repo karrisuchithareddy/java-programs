@@ -44,6 +44,7 @@ for(int i=3;i<=num;i++)
 }*/
 
 
+//program to find sum of even numbers in nth fibonacci series
 /*import java.io.*;
 class Loops
 {
