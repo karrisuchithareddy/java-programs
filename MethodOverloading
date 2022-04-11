@@ -1,0 +1,93 @@
+//program to use different constructors
+/*public class Overloading1 {
+	 int l,b,h;
+	 public Overloading1()
+	 {
+	  System.out.println("Default Constructor");
+	  l=b=h=0;
+	 }
+	 public Overloading1(int n)
+	 {
+	  System.out.println("Parameterized Constructor with only one parameter");
+	  l=b=h=n;
+	 }
+	 public Overloading1(int x,int y,int z)
+	 {
+	  System.out.println("Parameterized Constructor with 3 parameters");
+	  l=x;
+	  b=y;
+	  h=z;
+	 }
+	 public int Volume()
+	 {
+	  return l*b*h;
+	 }
+	 public static void main(String[] args)
+	 {
+		 Overloading1 c1=new Overloading1();
+		 Overloading1 c2=new Overloading1(6); 
+		 Overloading1 c3=new Overloading1(2,3,4);
+	  System.out.println(c1.Volume());
+	  System.out.println(c2.Volume());
+	  System.out.println(c3.Volume());
+	 }
+	}*/
+  
+ //program representing method overloading
+ /*public class Overloading2 {
+    public void Overloading2(int x,int y){
+    	int z;
+    	z=x;
+    	x=y;
+    	y=z;
+    	System.out.println(x+" "+y);
+    }
+    public void Overloading2(char p,char q) {
+    	char r;
+    	r=p;
+    	p=q;
+    	q=r;
+    	System.out.println(p+" "+q);
+    }
+    public void Overloading2(double m,double n) {
+    	double o;
+    	o=m;
+    	m=n;
+    	n=o;
+    	System.out.println(m+" "+n);
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Overloading2 s=new Overloading2();
+		s.Overloading2(10,20);
+		s.Overloading2('A','B');
+		s.Overloading2(3.15,4.25);
+	}
+
+}*/
+
+//program which says about method overloading
+/*public class methodOne {
+    public void methodOne(int i) {
+    	System.out.println("int-arg method");
+    }
+    public void methodOne(float f) {
+    	System.out.println("float-arg method");
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        methodOne t=new methodOne();
+        t.methodOne('a');
+        t.methodOne(10.2f);
+        //t.methodOne(4.5);//AUTOMATIC PROMOTION IS USED TO TRACE THE ERROR
+        t.methodOne(4.5f);
+	}
+
+}*/
+
+***POINTS TO REMEMBER TODAY***
+*println()
+*valueOf()
+*substring()
+are the default methods defined by java developers
