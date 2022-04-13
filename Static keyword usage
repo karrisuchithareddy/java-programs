@@ -1,0 +1,197 @@
+//PROGRAM TO FIND EMPLOYEE INFORMATION USING STATIC BLOCKS
+/*import java.io.*;
+public class Employee {
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	int eno;
+	String ename;
+	float sal;
+	static String company;
+	static float tot_sal;
+	static 
+	{
+		company="Infosys";
+		tot_sal=0;
+	}
+	public void getInfo()throws Exception
+	{
+		System.out.println("Enter the eno,ename,sal");
+		eno=Integer.parseInt(br.readLine());
+		ename=br.readLine();
+		sal=Float.parseFloat(br.readLine());
+		Employee.tot_sal+=sal;
+	}
+	public void displayInfo()
+	{
+		System.out.println("Employee Information is:");
+		System.out.println("Emp Number\t=\t"+eno);
+		System.out.println("Emp Name\t=\t"+ename);
+		System.out.println("Salary\t=\t"+sal);
+		System.out.println("Company\t=\t"+Employee.company);
+		
+	}
+	public static void showTotal()
+	{
+		System.out.println("Total Salaries paid by the company="+tot_sal);
+	}
+
+	public static void main(String[] args)throws Exception
+	{
+		// TODO Auto-generated method stub
+		Employee e1=new Employee();
+		Employee e2=new Employee();
+		e1.getInfo();
+		e2.getInfo();
+		e1.displayInfo();
+		e2.displayInfo();
+		Employee.showTotal();
+	}
+}*/
+
+//PROGRAM TO FIND N EMPLOYEE'S INFORMATION USING STATIC BLOCKS
+import java.io.*;
+public class Employee {
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	int eno;
+	String ename;
+	float sal;
+	static String company;
+	static float tot_sal;
+	static 
+	{
+		company="Infosys";
+		tot_sal=0;
+	}
+	public void getInfo()throws Exception
+	{
+		System.out.println("Enter the eno,ename,sal");
+		eno=Integer.parseInt(br.readLine());
+		ename=br.readLine();
+		sal=Float.parseFloat(br.readLine());
+		Employee.tot_sal+=sal;
+	}
+	public void displayInfo()
+	{
+		System.out.println("Employee Information is:");
+		System.out.println("Emp Number\t=\t"+eno);
+		System.out.println("Emp Name\t=\t"+ename);
+		System.out.println("Salary\t=\t"+sal);
+		System.out.println("Company\t=\t"+Employee.company);
+		
+	}
+	public static void showTotal()
+	{
+		System.out.println("Total Salaries paid by the company="+tot_sal);
+	}
+
+	public static void main(String[] args)throws Exception
+	{
+		// TODO Auto-generated method stub
+		/*Employee e1=new Employee();
+		Employee e2=new Employee();
+		e1.getInfo();
+		e2.getInfo();
+		e1.displayInfo();
+		e2.displayInfo();*/
+		//datatype arr[]=new datatype[size];//syntax to create an array
+		Employee e[]=new Employee[5];
+		for(int i=0;i<5;i++)
+		{
+			e[i]=new Employee();
+			e[i].getInfo();
+		}
+		for(int i=0;i<5;i++)//IT IS FOR ONLY 5 EMPLOYEES
+		{
+			System.out.println("Employee"+(i+1)+"Information is:");
+			e[i].displayInfo();
+		}
+		Employee.showTotal();
+	}
+}
+
+//CALL BY VALUE
+public class Demo {
+	public void Increment(int x)
+	{
+			x++;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Demo d=new Demo();
+        int p=10;
+		System.out.println("Before Function Call"); 
+		System.out.println(p);
+		
+		d.Increment(p);
+		
+		System.out.println("After Function Call");
+		System.out.println(p);
+	}
+
+}
+
+
+//CALL BY REFERENCE
+public class Demo {
+	public void Increment(int x[])
+	{
+		for(int i=0;i<x.length;i++) {
+			x[i]++;
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Demo d=new Demo();
+        int p[]= {10,20,30};
+		System.out.println("Before Function Call");
+		for(int i=0;i<p.length;i++) 
+		System.out.println(p[i]+" ");
+		
+		d.Increment(p);
+		
+		System.out.println("After Function Call");
+		for(int i=0;i<p.length;i++)
+		System.out.println(p[i]+" ");
+	}
+
+}
+
+***** IN JAVA PROGRAMMING IF U R PASSING OBJECT AS A PARAMETER TO VALUES, BY DEFAULT IT TAKES AS CALL BY REFERENCE *****
+
+//PROGRAM TO FIND BUBBLE SORT
+
+public class Bubblesort {
+	static void bubbleSort(int []arr)
+{
+	int n=arr.length;
+	int temp=0;
+	for(int i=0;i<n-1;i++) {
+		for(int j=0;j<n-i-1;j++) {
+			if(arr[j]>arr[j+1]) {
+				temp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+			}
+		}
+	}
+}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[]= {3,60,35,2,45,320,5};
+		System.out.println("Array Before Bubble Sort");
+		for(int i=0;i<arr.length;i++) {
+			System.out.println(arr[i]+" ");
+		}
+		System.out.println();
+        
+		bubbleSort(arr);
+		
+		System.out.println("Array After Bubble Sort");
+		for(int i=0;i<arr.length;i++) {
+			System.out.println(arr[i]+" ");
+		}
+	}
+
+}
