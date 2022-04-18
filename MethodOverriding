@@ -50,7 +50,7 @@ class BBB extends AAA
 {
 	public void show()
 	{
-		super.show();
+		super.show();//used to access parent class methods with same name
 		System.out.println("Child show method");
 	}
 	public void msg()
