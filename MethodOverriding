@@ -33,4 +33,45 @@ public class MethodOverriding {
 
 	}
 
+
+//usage of SUPER keyword
+class AAA
+{
+	public void show()
+	{
+		System.out.println("Parent show method");
+	}
+	public void display()
+	{
+		System.out.println("Parent Display method");
+	}
+}
+class BBB extends AAA
+{
+	public void show()
+	{
+		super.show();
+		System.out.println("Child show method");
+	}
+	public void msg()
+	{
+		System.out.println("Child msg method");
+	}
+}
+public class MethodOverriding {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		BBB b=new BBB();
+		b.display();
+		b.msg();
+		b.show();
+		
+
+	}
+
+}
+
+
 }
