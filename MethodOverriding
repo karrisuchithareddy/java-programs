@@ -274,3 +274,57 @@ public class Dynamic {
 
 }
 
+
+
+//DYNAMIC METHOD DISPATCHING
+import java.util.Scanner;
+class Number
+{
+	int x;
+	Scanner sc=new Scanner(System.in);
+	public void getNo()
+	{
+		System.out.println("Enter a number:");
+		x=sc.nextInt();
+	}
+	void show()
+	{
+		System.out.println("Decimal:"+x);
+	}
+}
+class Hexa extends Number
+{
+	void show()
+	{
+		super.show();
+		System.out.println("HexaNumber:"+Integer.toHexString(x));
+	}
+}
+class Octal extends Number
+{
+	void show()
+	{
+		super.show();
+		System.out.println("Octal:"+Integer.toOctalString(x));
+	}
+}
+public class MethodOverriding2 {
+	public static void Disp(Number n)
+	{
+		if(n instanceof Hexa)
+			System.out.println("Hexa class Instance");
+		else if(n instanceof Octal)
+			System.out.println("Octal class Instance");
+		n.getNo();
+		n.show();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Disp(new Hexa());
+		Disp(new Octal());
+
+	}
+
+}
