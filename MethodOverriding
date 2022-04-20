@@ -204,3 +204,30 @@ public class Super3 {
 
 }
 
+//USAGE OF final KEYWORD
+final class AAAA//3rd usage
+{
+	final void show()//2nd usage
+	{
+		
+	}
+}
+class BBBB extends AAAA//gives an error due to the parent class is made to final class
+{
+	public void show()//gives an error due to the method in parent class is final
+	{
+		
+	}
+}
+public class Finaldemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		final float pi=3.14f;
+		System.out.println(pi);
+		//1st usage //pi=3.15f; //gives an error due to variable is declared as final,so we can't assign a new value to a variable
+
+	}
+
+}
