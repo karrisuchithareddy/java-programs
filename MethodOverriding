@@ -231,3 +231,46 @@ public class Finaldemo {
 	}
 
 }
+
+
+//DYNAMIC METHOD DISPATCHING(RUN-TIME POLYMORPHISM)
+class S
+{
+	public void m1()
+	{
+		System.out.println("S method");
+	}
+}
+class T extends S
+{
+	public void m1()
+	{
+		System.out.println("T method");
+	}
+}
+class R extends S
+{
+	public void m1()
+	{
+		System.out.println("R method");
+	}
+}
+public class Dynamic {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		S s;
+		s=new S();
+		s.m1();
+		
+		s=new T();
+		s.m1();
+		
+		s=new R();
+		s.m1();
+				
+
+	}
+
+}
+
