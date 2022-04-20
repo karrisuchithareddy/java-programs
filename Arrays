@@ -20,26 +20,34 @@ class Arrays1
 
 //program to find max & min elements in a given array
 /*import java.io.*;
-class Arrays1
+class Input//ARRAYS MAX AND MIN ELEMENT
 {
- public static void main(String args[])throws Exception
- {
-  int x[],n,i,max=0,min=0;
-  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-  System.out.println("Enter size of an array:");
-  n=Integer.parseInt(br.readLine());
-  x=new int[n];
-  System.out.println("Enter the "+n+" elements");
-   for(i=0;i<n;i++)
-     x[i]=Integer.parseInt(br.readLine());
-  System.out.println("Elements in the array are:");
-  for(int ele:x)
-    if(max<x[i])
-      max=x[i];
-      System.out.println("maximum element in an array is:"+ max);
-  for(int ele:x)
-    if(min>x[i])
-      min=x[i];
+	public static void main(String args[])throws Exception
+	{
+		int x[],n,i,max=0;
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter the size of an array:");
+		n=Integer.parseInt(br.readLine());
+		x=new int[n];
+		System.out.println("enter the "+n+" elements:");
+		for( i=0;i<n;i++)
+		{
+			x[i]=Integer.parseInt(br.readLine());
+		}
+		System.out.println("elements in the array are:");
+		int min=x[0];
+		for (int ele:x)
+			System.out.println(ele);
+		for(i=0;i<n;i++){
+		if(max<x[i])
+			max=x[i];}
+		System.out.println("maximum element "+max);
+		for(i=0;i<n;i++){
+		if(min>x[i])
+			min=x[i];}
+		System.out.println("minimum element "+min);
+	}
+}*/
 */
 
 //program to find even and odd elements in a given array
