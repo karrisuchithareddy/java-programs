@@ -32,8 +32,9 @@ public class MethodOverriding {
 		
 
 	}
-
-
+}
+	
+	
 //usage of SUPER keyword
 class AAA
 {
@@ -73,5 +74,55 @@ public class MethodOverriding {
 
 }
 
+
+}
+
+
+
+import java.util.Scanner;
+class Number
+{
+	int x;
+	Scanner sc=new Scanner(System.in);
+	public void getNo()
+	{
+		System.out.println("Enter a number:");
+		x=sc.nextInt();
+	}
+	void show()
+	{
+		System.out.println("Decimal:"+x);
+	}
+}
+class Hexa extends Number
+{
+	void show()
+	{
+		super.show();
+		System.out.println("HexaNumber:"+Integer.toHexString(x));
+	}
+}
+class Octal extends Number
+{
+	void show()
+	{
+		super.show();
+		System.out.println("Octal:"+Integer.toOctalString(x));
+	}
+}
+public class MethodOverriding2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Hexa h=new Hexa();
+		h.getNo();
+		h.show();
+		
+		Octal o=new Octal();
+		o.getNo();
+		o.show();
+
+	}
 
 }
