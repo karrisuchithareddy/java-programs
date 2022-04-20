@@ -151,3 +151,56 @@ public class Super1 {
 	}
 
 }
+
+//usage of super() keyword
+class GP
+{
+	int x;
+	public GP(int x)
+	{
+		this.x=x;
+	}
+	public void showX()
+	{
+		System.out.println("X="+x);
+	}
+}
+class CP extends GP
+{
+	int y;
+	public CP(int p,int q)
+	{
+		super(p);
+		y=q;
+	}
+	public void showY()
+	{
+		System.out.println("Y="+y);
+	}
+}
+class CP2 extends CP
+{
+	int z;
+	public CP2(int p,int q,int r)
+	{
+		super(p,q);
+		z=r;
+	}
+	public void showZ()
+	{
+		System.out.println("Z="+z);
+	}
+}
+public class Super3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CP2 c=new CP2(10,20,30);
+		c.showX();
+		c.showY();
+		c.showZ();
+
+	}
+
+}
+
