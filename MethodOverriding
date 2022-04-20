@@ -126,3 +126,28 @@ public class MethodOverriding2 {
 	}
 
 }
+
+
+//USAGE OF this()
+class Parent21
+{
+	public Parent21()
+	{
+		//this("Aditya");
+		System.out.println("Good Morning Guest");
+	}
+	public Parent21(String name)
+	{
+		this();
+		System.out.println("Good Morning "+name);
+	}
+}
+public class Super1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Parent21 p=new Parent21("Aditya");//calls parameterized constructor at first
+      //Parent21 p=new Parent21(); //calls default constructor at first
+	}
+
+}
