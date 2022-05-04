@@ -131,7 +131,7 @@ class T1 implements I
 	}
 	public void m3()
 	{
-		System.out.println("Drfault Overrided Method Definition");
+		System.out.println("Default Overrided Method Definition");
 	}
 }
 class T2 implements I
