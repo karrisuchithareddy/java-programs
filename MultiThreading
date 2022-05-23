@@ -35,6 +35,13 @@ public class Threadding {
 	
 	
 //THREAD METHODS
+1.setName()
+2.getName()
+3.setPriority()
+4.getPriority()
+5.sleep(long ms)
+6.join()
+7.yield()
 //SET AND GET METHODS
 class Thread3 extends Thread
 {
@@ -210,3 +217,126 @@ class ThreadDemo
  }
  }
 
+
+//USING RUNNABLE
+class Thread11 implements Runnable
+{
+	public void run()
+	{
+		while(true)
+		{
+			System.out.println("Good Morning");
+			try{
+				Thread.sleep(1000);}
+			catch(InterruptedException ie) {
+				System.out.println(ie);
+			}
+		}
+	}
+}
+class Thread12 implements Runnable
+{
+	public void run()
+	{
+		while(true)
+		{
+			System.out.println("Hello");
+			try{
+				Thread.sleep(2000);}
+			catch(InterruptedException ie) {
+				System.out.println(ie);
+			}
+		}
+	}
+}
+class Thread13 implements Runnable
+{
+	public void run()
+	{
+		while(true)
+		{
+			System.out.println("Welcome");
+			try{
+				Thread.sleep(3000);}
+			catch(InterruptedException ie) {
+				System.out.println(ie);
+			}
+		}
+	}
+}
+public class ThreadRun {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread t1=new Thread(new Thread11());
+		Thread t2=new Thread(new Thread12());
+		Thread t3=new Thread(new Thread13());
+		t1.start();
+		t2.start();
+		t3.start();
+
+	}
+
+}
+yield()
+ yield is used to pause the currently executing thread and gives change to other threads which are in waiting
+1)If other threads have higher priority than this it will gives a chance to run it.
+2)If other threads all are having the priority lower than current executing thread,it continues its execution.
+3)If other thread all are having equal priority with currently executing thread then we can't expect the output
+class Thread22 extends Thread
+{
+	public void run()
+	{
+		//Thread.yield();
+		for(int i=0;i<10;i++)
+		{
+			System.out.println("Dhoni");
+		}
+	}
+}
+public class ThreadYeild {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread22 t22=new Thread22();
+		t22.start();
+		t22.setPriority(9);
+		
+		Thread.yield();
+		for(int i=0;i<10;i++)
+		{
+			System.out.println("YuvaRaj");
+		}
+
+	}
+
+}
+
+//JOIN METHOD
+class Thread33 extends Thread
+{
+	public void run()
+	{
+		//Thread.yield();
+		for(int i=0;i<10;i++)
+		{
+			System.out.println("Dhoni");
+		}
+	}
+}
+public class ThreadJoin {
+
+	public static void main(String[] args)throws InterruptedException {
+		// TODO Auto-generated method stub
+		Thread33 t33=new Thread33();
+		t33.start();
+		t33.setPriority(9);
+		t33.join();
+		for(int i=0;i<10;i++)
+		{
+			System.out.println("YuvaRaj");
+		}
+
+	}
+
+}
